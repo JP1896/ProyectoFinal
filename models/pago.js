@@ -1,24 +1,28 @@
 const Sequelize = require('sequelize');
 
-const Orden = (sequelize)=>{
-    sequelize.define('orden',{
+const Pago = (sequelize)=>{
+    sequelize.define('pago',{
         id: {
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true
         },
+        numero: {
+            type: Sequelize.INTEGER,
+            allowNull: false
+        },
         nombre: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        cantidad: {
-            type: Sequelize.INTEGER,
+        fechaExp: {
+            type: Sequelize.STRING,
             allowNull: false
         },
-        monto: {
+        codigo: {
             type: Sequelize.INTEGER,
             allowNull: false
         }
     })
 }
-module.exports = Orden
+module.exports = Pago

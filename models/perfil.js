@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const Orden = (sequelize)=>{
-    sequelize.define('orden',{
+const Perfil = (sequelize)=>{
+    sequelize.define('perfil',{
         id: {
             type: Sequelize.INTEGER,
             allowNull: false,
@@ -11,14 +11,23 @@ const Orden = (sequelize)=>{
             type: Sequelize.STRING,
             allowNull: false
         },
-        cantidad: {
+        calle: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        noExterior: {
             type: Sequelize.INTEGER,
             allowNull: false
         },
-        monto: {
+        telefono: {
             type: Sequelize.INTEGER,
             allowNull: false
-        }
+        },
+        email: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        fecha: Sequelize.DATE
     })
 }
-module.exports = Orden
+module.exports = Perfil

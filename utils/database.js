@@ -1,20 +1,25 @@
-const Sequelize = require("sequelize")
+// Objeto de conexion
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('base2','user1','root',{
-    dialect: 'mysql', //3306 port
-    host: '3.94.165.232',
-    define:{
-        //Evitar que nos ponga createdAt y updateAt
-        timestamps: false,
-        //Evitar plural
-        freezeTableName : true
-    }    
+// p1= Nombre de la DB CREATE DATABASE== base2, p2= user, p3= password== root
+const sequelize = new Sequelize('user5DB','user5','root',{
+    dialect: 'mysql', //port: 3306,
+    host: '54.198.161.35',
+    define: {
+        timestamps: false,      // Evitar createdAt y updateAt
+        freezeTableName: true   // Evitar plural
+    }
 })
 
-const modelDefiners =[
-    require('../models/orden')
+// Carga de las definiciones de los modelos
+const modelDefiners = [
+    // Modelos definidos dentro de la carpeta models
+    require('../models/orden'),
+    require('../models/perfil'),
+    require('../models/pago')
 ]
 
+// Adherir los modelos al objeto de conexion 
 for(const modelDefiner of modelDefiners){
     modelDefiner(sequelize)
 }
