@@ -1,5 +1,39 @@
 const path = require('path')
 const Orden = require('../utils/database').models.orden
+const Pago = require('../utils/database').models.pago
+const Perfil = require('../utils/database').models.perfil
+
+exports.getOrden = (req,res)=>{
+    res.sendFile(path.join(__dirname,'../views/orden.html'));
+}
+
+exports.postAgregarPago = (req,res)=>{
+    console.log(req.body)
+    Pago.create(req.body)
+        .then(o=>{
+            console.log("Orden Exitosa")
+            res.json({estado: "Aceptado"})
+        })
+        .catch(err=>{
+            console.log(err)
+            res.json({estado: "Error"})
+        })
+}
+
+exports.postAgregarPerfil = (req,res)=>{
+    console.log(req.body)
+    Perfil.create(req.body)
+        .then(o=>{
+            console.log("Orden Exitosa")
+            res.json({estado: "Aceptado"})
+        })
+        .catch(err=>{
+            console.log(err)
+            res.json({estado: "Error"})
+        })
+}
+
+
 
 exports.postAgregarOrden = (req,res)=>{
     console.log(req.body)
