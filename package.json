@@ -19,6 +19,7 @@
   "homepage": "https://github.com/JP1896/ProyectoFinal#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.12.0-alpha.1"
   },
   "devDependencies": {
