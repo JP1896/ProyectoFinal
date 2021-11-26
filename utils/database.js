@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 // p1= Nombre de la DB CREATE DATABASE== base2, p2= user, p3= password== root
 const sequelize = new Sequelize('user5DB','user5','root',{
     dialect: 'mysql', //port: 3306,
-    host: '54.198.161.35',
+    host: 'localhost',
     define: {
         timestamps: false,      // Evitar createdAt y updateAt
         freezeTableName: true   // Evitar plural
