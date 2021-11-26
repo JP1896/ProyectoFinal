@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Spree</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilo1.css">
+</head>
+    <body>
+        <div class="container-fluid">
+            <div id="fuenteShoppingSpree" class="row display-4">SHOPPING SPREE</div>
+            <hr class="row mt-0 mb-4"/>
+
+            <div class="container">
+                <h1>AGREGAR TARJETA</h1>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <form method="POST" action="/shoppingSpree/pago" class="px-2 py-2">
+                                <div class="row">
+                                    <label class="form-label" for="noTarjeta">Número de la tarjeta</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <input type="number" class="form-control" id="noTarjeta" name="noTarjeta">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <label class="form-label" for="nombreT">Nombre y apellido</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" id="nombreT" name="nombreT">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="exp">Fecha de expiación</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="codigo">Código de seguridad</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control" id="exp" name="exp">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control" id="codigo" name="codigo">
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-5 justify-content-between">
+                                    <div class="col-md"></div>
+                                    <div class="col-md-3">
+                                        <input type="submit" class="btn btn-lg btn-primary" value="Continuar">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md">
+                        <div class="card px-2 py-2">
+                            <div class="row">
+                                <h4>Productos elegidos</h4>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-8">
+                                    Cantidad:
+                                </div>
+                                <div class="col-md-4">
+                                    d
+                                </div>
+                            </div>
+                            <hr class="row mt-3"/>
+                            <div class="row mb-5">
+                                <div class="col-md-8">
+                                    Precio total:
+                                </div>
+                                <div class="col-md-4">
+                                    <strong>$ d</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
