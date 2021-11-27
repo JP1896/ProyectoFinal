@@ -18,6 +18,10 @@ const Orden = (sequelize)=>{
         monto: {
             type: Sequelize.INTEGER,
             allowNull: false
+        },
+        precioIndiv: {
+            type: Sequelize.INTEGER,
+            allowNull: false
         }
     })
 }

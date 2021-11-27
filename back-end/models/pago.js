@@ -2,14 +2,10 @@ const Sequelize = require('sequelize');
 
 const Pago = (sequelize)=>{
     sequelize.define('pago',{
-        id: {
+        numero: {
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true
-        },
-        numero: {
-            type: Sequelize.INTEGER,
-            allowNull: false
         },
         nombre: {
             type: Sequelize.STRING,

@@ -2,13 +2,9 @@ const Sequelize = require('sequelize');
 
 const Perfil = (sequelize)=>{
     sequelize.define('perfil',{
-        id: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
-            primaryKey: true
-        },
         nombre: {
             type: Sequelize.STRING,
+            primaryKey: true,
             allowNull: false
         },
         calle: {

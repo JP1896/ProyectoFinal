@@ -104,7 +104,8 @@ exports.postBorrarOrden = (req,res)=>{
 exports.postActualizarOrden = (req,res)=>{
     console.log(req.body)
     Orden.update({
-        item:req.body.item
+        cantidad: req.body.cantidad,
+        monto: req.body.monto
     },{
         where:{
             id: req.body.id
