@@ -16,7 +16,8 @@ const modelDefiners = [
     // Modelos definidos dentro de la carpeta models
     require('../models/orden'),
     require('../models/perfil'),
-    require('../models/pago')
+    require('../models/pago'),
+    require('../models/articulos')
 ]
 
 // Adherir los modelos al objeto de conexion 

@@ -2,6 +2,16 @@ const path = require('path')
 const Orden = require('../utils/database').models.orden
 const Pago = require('../utils/database').models.pago
 const Perfil = require('../utils/database').models.perfil
+const Articulos = require('../utils/database').models.articulos
+
+exports.getObtenerArticulos = (req,res)=>{
+    Articulos.findAll()
+    .then(Articulos =>{
+        console.log(Articulos)
+        res.json(Articulos)
+    })
+    .catch(err=>console.log(err))
+}
 
 exports.postOrden = (req,res)=>{
     res.sendFile(path.join(__dirname,'../views/orden.html'));
@@ -56,6 +66,22 @@ exports.getObtenerOrden = (req,res)=>{
         res.json(Orden)
     })
     .catch(err=>console.log(err))
+}
+
+exports.getBorrarOrdenAll = (req,res)=>{
+    console.log(req.body)
+    Orden.destroy({
+        where:{},
+        truncate: true
+    })
+    .then(()=>{
+        console.log("Tabla Eliminada")
+        res.json({estado:"Aceptado"})
+    })
+    .catch(err=>{
+        console.log(err)
+        res.json({estado:"Error"})
+    })
 }
 
 exports.postBorrarOrden = (req,res)=>{
