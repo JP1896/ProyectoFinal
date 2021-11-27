@@ -35,7 +35,7 @@ function enviarJSON(){
         // Crear conexion
         xhr.open("POST", url)
         xhr.setRequestHeader("Content-Type", "application/json")
-        var data = JSON.stringify({ "id": j, "nombre": articulos[i].nombre, "cantidad": n[i], "monto": m[i] })
+        var data = JSON.stringify({ "id": j, "nombre": articulos[i].nombre, "cantidad": n[i], "monto": m[i], "precioIndiv": articulos[i].monto})
         xhr.send(data)
         console.log(data)
       }  
